@@ -179,9 +179,17 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Entities\Circle.cs" />
+    <Compile Include="Entities\IForm.cs" />
+    <Compile Include="Entities\Rectangle.cs" />
+    <Compile Include="Entities\Square.cs" />
+    <Compile Include="Entities\Triangle.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="JsonUtilities\FormConverter.cs" />
+    <Compile Include="JsonUtilities\JsonCreationConverter.cs" />
+    <Compile Include="Models\FormModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
