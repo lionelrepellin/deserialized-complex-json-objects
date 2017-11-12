@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeserializedComplexJsonObjects.JsonUtilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -19,6 +20,9 @@ namespace DeserializedComplexJsonObjects
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var jsonSettings = config.Formatters.JsonFormatter.SerializerSettings;
+            jsonSettings.Converters.Add(new FormConverter());
         }
     }
 }
