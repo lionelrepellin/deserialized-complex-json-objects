@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DeserializedComplexJsonObjects.Entities;
+using DeserializedComplexJsonObjects.Models;
 
 namespace DeserializedComplexJsonObjects.JsonUtilities
 {
     public class FormConverter : JsonCreationConverter<IForm>
     {
-        private readonly string _namespace = "DeserializedComplexJsonObjects.Entities";
+        private readonly string _namespace = "DeserializedComplexJsonObjects.Models";
         private readonly IEnumerable<string> _acceptedTypes = new List<string> { "CIRCLE", "RECTANGLE", "SQUARE", "TRIANGLE" };
 
         protected override IForm Create(Type objectType, JObject jObject)
@@ -17,7 +17,7 @@ namespace DeserializedComplexJsonObjects.JsonUtilities
             if (jObject.Type == JTokenType.Object)
             {
                 if (!FieldExists("type", jObject))
-                    throw new NotImplementedException("The 'type' property does not exist.");
+                    throw new KeyNotFoundException("The 'type' property does not exist.");
 
                 var jToken = jObject["type"];
                 var type = jToken.Value<string>();
@@ -29,7 +29,7 @@ namespace DeserializedComplexJsonObjects.JsonUtilities
                 return (IForm)Activator.CreateInstance(Type.GetType($"{_namespace}.{type}", true, true));
             }
 
-            throw new ArgumentException();
+            throw new ArgumentException("Object type does not match.", nameof(jObject));
         }
 
         private bool FieldExists(string fieldName, JObject jObject)

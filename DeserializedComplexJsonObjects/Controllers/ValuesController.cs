@@ -1,5 +1,4 @@
-﻿using DeserializedComplexJsonObjects.Entities;
-using DeserializedComplexJsonObjects.Models;
+﻿using DeserializedComplexJsonObjects.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +23,12 @@ namespace DeserializedComplexJsonObjects.Controllers
         }
 
         // POST api/values
-        public IHttpActionResult Post([FromBody]FormModel model)
+        public IHttpActionResult Post([FromBody]IForm form)
         {
-            if (!model.Form.IsValid())
+            if (!form.IsValid())
                 return InternalServerError(new Exception("Object is invalid."));
 
-            return Ok($"{model.Form.Type} area : {model.Form.CalculateArea()}");
+            return Ok($"{form.Type} area : {form.CalculateArea()}");
         }
 
         // PUT api/values/5

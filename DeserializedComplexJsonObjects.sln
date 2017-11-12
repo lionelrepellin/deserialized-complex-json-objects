@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeserializedComplexJsonObjects", "DeserializedComplexJsonObjects\DeserializedComplexJsonObjects.csproj", "{5D8D2779-9427-4565-9A80-F083C92381C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeserializedComplexJsonObjects.Tests", "DeserializedComplexJsonObjects.Tests\DeserializedComplexJsonObjects.Tests.csproj", "{CA07A157-023D-4E5F-A2F2-AF2363658642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5D8D2779-9427-4565-9A80-F083C92381C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D8D2779-9427-4565-9A80-F083C92381C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D8D2779-9427-4565-9A80-F083C92381C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA07A157-023D-4E5F-A2F2-AF2363658642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA07A157-023D-4E5F-A2F2-AF2363658642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA07A157-023D-4E5F-A2F2-AF2363658642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA07A157-023D-4E5F-A2F2-AF2363658642}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

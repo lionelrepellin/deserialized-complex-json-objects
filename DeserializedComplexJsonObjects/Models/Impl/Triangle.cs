@@ -1,4 +1,4 @@
-﻿namespace DeserializedComplexJsonObjects.Entities
+﻿namespace DeserializedComplexJsonObjects.Models
 {
     public class Triangle : IForm
     {

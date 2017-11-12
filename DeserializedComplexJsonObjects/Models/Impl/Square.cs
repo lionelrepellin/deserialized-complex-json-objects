@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DeserializedComplexJsonObjects.Entities
+namespace DeserializedComplexJsonObjects.Models
 {
     public class Square : IForm
     {
